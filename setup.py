@@ -8,6 +8,7 @@ long_description = (here / 'README.md').read_text(encoding='utf-8')
 setup(
     name='ics2ews',
     description="Synchronize ICS to Exchange",
+    packages=["ics2ews"],
     use_scm_version={
         "relative_to": __file__,
         "write_to": "ics2ews/version.py",
