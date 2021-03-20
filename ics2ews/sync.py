@@ -36,7 +36,7 @@ def main():
         end=EWSDateTime.from_string(str(i.end))
         found = False
         for calendar_item in my_account.calendar.filter(start__lt=end, end__gt=start):
-            if args.ics in calendar_item.text_body and i.uid in calendar_item.text_body:
+            if calendar_item.text_body and args.ics in calendar_item.text_body and i.uid in calendar_item.text_body:
                 found = True
                 break
         if found:
